@@ -48,7 +48,7 @@ namespace Lab2Csharp
         {
             for (int i = 0; i < points.Length; i++)
             {
-                Console.WriteLine($"X = {points[i].x} B  = {points[i].y}");
+                Console.WriteLine($"X = {points[i].x} Y  = {points[i].y}");
             }
         }
 
