@@ -7,19 +7,38 @@ namespace Lab2Csharp
         static void Main(string[] args)
         {
             int n = 2;
+            double avgsqure = 0;
+            double min=0;
+            triangle[] test = new triangle[n];
+           
 
             for (int i = 0; i < n; i++)
             {
-                triangle test = new triangle();
-                test.Print();
-                test.Lenght();
-                test.Angle();
-                test.Perimetr();
-                test.Square();
+                test[i] = new triangle();
+                test[i].Print();
+                test[i].Lenght();
+                test[i].IsExists();
+                test[i].Angle();
+                test[i].Perimetr();
+                test[i].Square();
 
-
+                min = test[0].perimetr;
+                avgsqure += test[i].square;
                 Console.WriteLine("----------------------------------");
             }
+            avgsqure /= n;
+            Console.WriteLine($"Average Square = {avgsqure}");
+
+            for (int i = 0; i < n; i++)
+            {
+                if (test[i].perimetr < min)
+                {
+                    min = test[i].perimetr;
+                }
+
+            }
+            Console.WriteLine($"Minimum of perimetr = {min}");
+
         }
     }
 }
