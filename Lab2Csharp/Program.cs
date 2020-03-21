@@ -17,6 +17,7 @@ namespace Lab2Csharp
                 test[i] = new triangle();
                 test[i].Print();
                 test[i].Lenght();
+             //   test[i].enter();
                 test[i].IsExists();
                 test[i].Angle();
                 test[i].Perimetr();

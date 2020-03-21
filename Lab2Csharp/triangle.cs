@@ -41,10 +41,11 @@ namespace Lab2Csharp
                     Console.WriteLine("\t\tThe triangle does not exist");
                     break;
                 }
+
             }
         }
 
-            public void Print()
+        public void Print()
         {
             for (int i = 0; i < points.Length; i++)
             {
@@ -63,15 +64,20 @@ namespace Lab2Csharp
             }
 
         }
+
         public void Angle()
         {
-            angle1 = Math.Cos((Math.Pow(lenght[0], 2) + Math.Pow(lenght[2], 2) - Math.Pow(lenght[1], 2)) / (2 * lenght[0] * lenght[2]));
-            angle2 = Math.Cos((Math.Pow(lenght[0], 2) + Math.Pow(lenght[1], 2) - Math.Pow(lenght[2], 2)) / (2 * lenght[0] * lenght[1]));
-            angle3 = Math.Cos((Math.Pow(lenght[1], 2) + Math.Pow(lenght[2], 2) - Math.Pow(lenght[0], 2)) / (2 * lenght[2] * lenght[1]));
 
-            Console.WriteLine($"Angle 1 = {angle1 * 180 / Math.PI}");
-            Console.WriteLine($"Angle 2 = {angle2 * 180 / Math.PI}");
-            Console.WriteLine($"Angle 3 = {angle3 * 180 / Math.PI}");
+            double a = lenght[0];
+            double b = lenght[1];
+            double c = lenght[2];
+
+            angle1 = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * 180 / Math.PI;
+            angle2 = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * 180 / Math.PI;
+            angle3 = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * 180 / Math.PI;
+            Console.WriteLine($"Angle 1 = {angle1}");
+            Console.WriteLine($"Angle 2 = {angle2}");
+            Console.WriteLine($"Angle 3 = {angle3}");
         }
 
         public void Perimetr()
