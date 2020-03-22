@@ -6,7 +6,7 @@ namespace Lab2Csharp
     {
         static void Main(string[] args)
         {
-            int n = 2;
+            int n = 100;
             double avgsqure = 0;
             double min=0;
             triangle[] test = new triangle[n];
@@ -17,12 +17,13 @@ namespace Lab2Csharp
                 test[i] = new triangle();
                 test[i].Print();
                 test[i].Lenght();
-             //   test[i].enter();
                 test[i].IsExists();
-                test[i].Angle();
-                test[i].Perimetr();
-                test[i].Square();
-
+                if (test[i].a == true)
+                {
+                    test[i].Angle();
+                    test[i].Perimetr();
+                    test[i].Square();
+                }
                 min = test[0].perimetr;
                 avgsqure += test[i].square;
                 Console.WriteLine("----------------------------------");

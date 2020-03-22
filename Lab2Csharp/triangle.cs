@@ -20,6 +20,7 @@ namespace Lab2Csharp
         double angle3 = 0;
         public double perimetr = 0;
         public double square = 0;
+        public bool a = true;
         Random rand = new Random();
         public triangle()
         {
@@ -39,6 +40,7 @@ namespace Lab2Csharp
                 if (lenght[i] + lenght[(i + 1) % n] <= lenght[(i + 2) % n])
                 {
                     Console.WriteLine("\t\tThe triangle does not exist");
+                    a = false;
                     break;
                 }
 
